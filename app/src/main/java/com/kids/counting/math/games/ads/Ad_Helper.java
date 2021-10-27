@@ -55,7 +55,12 @@ public class Ad_Helper extends Activity {
     //.................................................
     public static void loadIntersitialAd(Activity activity) {
         new MyMoPub().init(activity, activity.getString(R.string.mop_ub_interstitial));
-        interstitialAd(activity);
+        if (isOnline(activity)){
+            interstitialAd(activity);
+        }
+        else {
+            Log.e(mopub_TAG, "no internet , cannot load interstitial ");
+        }
     }
 
     private static void interstitialAd(Activity activity) {
@@ -173,7 +178,12 @@ public class Ad_Helper extends Activity {
 
         new MyMoPub().init(activity, activity.getString(R.string.mop_ub_banner));
 
-        loadBannerAd(activity, view);
+        if (isOnline(activity)){
+            loadBannerAd(activity, view);
+        }
+        else {
+            Log.e(mopub_TAG, "no internet , cannot load interstitial ");
+        }
     }
 
     private static void loadBannerAd(Activity activity, LinearLayout view) {
@@ -249,7 +259,12 @@ public class Ad_Helper extends Activity {
     //.................................................
     public static void loadNativeAd(Activity activity) {
         new MyMoPub().init(activity, activity.getString(R.string.mop_ub_native));
-        nativeAd(activity);
+        if (isOnline(activity)){
+            nativeAd(activity);
+        }
+        else {
+            Log.e(mopub_TAG, "no internet , cannot load interstitial ");
+        }
     }
 
     private static void nativeAd(Activity activity) {
