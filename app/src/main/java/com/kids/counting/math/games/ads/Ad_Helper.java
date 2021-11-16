@@ -14,6 +14,7 @@ import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.ads.MobileAds;
 import com.kids.counting.math.games.Addition;
 import com.kids.counting.math.games.Competition;
 import com.kids.counting.math.games.Completemunu;
@@ -27,6 +28,8 @@ import com.mopub.mobileads.MoPubErrorCode;
 import com.mopub.mobileads.MoPubInterstitial;
 import com.mopub.mobileads.MoPubView;
 import com.mopub.nativeads.FacebookAdRenderer;
+import com.mopub.nativeads.GooglePlayServicesAdRenderer;
+import com.mopub.nativeads.GooglePlayServicesViewBinder;
 import com.mopub.nativeads.MoPubNative;
 import com.mopub.nativeads.MoPubStaticNativeAdRenderer;
 import com.mopub.nativeads.NativeAd;
@@ -324,7 +327,15 @@ public class Ad_Helper extends Activity {
                                 .callToActionId(R.id.fb_native_ad_call_to_action)
                                 .build());
 
-
+                GooglePlayServicesAdRenderer googlePlayServicesAdRenderer = new GooglePlayServicesAdRenderer(
+                        new GooglePlayServicesViewBinder.Builder(R.layout.admob_native)
+                                .mediaLayoutId(R.id.admob_native_media_layout) // bind to your `com.mopub.nativeads.MediaLayout` element
+                                .titleId(R.id.admob_native_ad_tittle)
+                                .textId(R.id.admob_native_ad_text)
+                                .callToActionId(R.id.admob_native_ad_icon)
+                                .privacyInformationIconImageId(R.id.admob_native_ad_privacy)
+                                .build());
+                moPubNative.registerAdRenderer(googlePlayServicesAdRenderer);
 
                 moPubNative.registerAdRenderer(facebookAdRenderer);
 
@@ -411,7 +422,15 @@ public class Ad_Helper extends Activity {
                                 // End of binding to new layouts
                                 .callToActionId(R.id.fb_native_ad_call_to_action)
                                 .build());
-
+                GooglePlayServicesAdRenderer googlePlayServicesAdRenderer = new GooglePlayServicesAdRenderer(
+                        new GooglePlayServicesViewBinder.Builder(R.layout.admob_native)
+                                .mediaLayoutId(R.id.admob_native_media_layout) // bind to your `com.mopub.nativeads.MediaLayout` element
+                                .titleId(R.id.admob_native_ad_tittle)
+                                .textId(R.id.admob_native_ad_text)
+                                .callToActionId(R.id.admob_native_ad_icon)
+                                .privacyInformationIconImageId(R.id.admob_native_ad_privacy)
+                                .build());
+                moPubNative.registerAdRenderer(googlePlayServicesAdRenderer);
 
                 moPubNative.registerAdRenderer(facebookAdRenderer);
 

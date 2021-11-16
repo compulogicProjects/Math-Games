@@ -1,7 +1,18 @@
 <resources>
     <string name="app_name">gameMath</string>
-    //.......... mopub test ad ids
     <string name="mop_ub_banner" translatable="false">9e7a0d1252334865af06986d4d8f809e</string>
     <string name="mop_ub_interstitial" translatable="false">e5cd81154bb44da9bf9158d4cc634842</string>
     <string name="mop_ub_native" translatable="false">4bf7ab70f81e4ea298f518b17f4d900b</string>
+
+    //.......... mopub test ad ids
+
+<!--
+      <string name="mop_ub_banner" translatable="false">b195f8dd8ded45fe847ad89ed1d016da</string>
+    <string name="mop_ub_interstitial" translatable="false">24534e1901884e398f1253216226017e</string>
+    <string name="mop_ub_native" translatable="false">11a17b188668469fb0412708c3d16813</string>
+-->
+
+    <string name="admod_appID" translatable="false">ca-app-pub-3103905625798676~4178269847</string>
+
+
 </resources>
