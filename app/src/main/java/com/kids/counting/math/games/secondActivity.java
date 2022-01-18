@@ -17,9 +17,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.kids.counting.math.games.ads.Ad_Helper;
-
-import java.util.zip.Inflater;
+import com.kids.counting.math.games.ads.Facebook_AdHelper;
 
 public class secondActivity extends AppCompatActivity {
     TextView btnadd, btnmul, btndiv, btnsub, btncomp, btncount;
@@ -40,16 +38,18 @@ public class secondActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbaradd);
         toolbar.setTitle("Math Game");
 
-        relativeLayout = findViewById(R.id.mainLayout);
+        //relativeLayout = findViewById(R.id.mainLayout);
 
-        Ad_Helper.showNativeAd(this, relativeLayout);
+        //Ad_Helper.showNativeAd(this, relativeLayout);
+
+        Facebook_AdHelper.loadFacebookNativeAd(this);
 
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Constant.intentconstant = 1;
-                Ad_Helper.showIntersitial(secondActivity.this);
-
+               // Ad_Helper.showIntersitial(secondActivity.this);
+                Facebook_AdHelper.showFbInterstitialAd(secondActivity.this);
             }
         });
 
@@ -80,14 +80,16 @@ public class secondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Constant.intentconstant = 2;
-                Ad_Helper.showIntersitial(secondActivity.this);
+                Facebook_AdHelper.showFbInterstitialAd(secondActivity.this);
+//                Ad_Helper.showIntersitial(secondActivity.this);
             }
         });
         btncount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Constant.intentconstant = 3;
-                Ad_Helper.showIntersitial(secondActivity.this);
+                Facebook_AdHelper.showFbInterstitialAd(secondActivity.this);
+//                Ad_Helper.showIntersitial(secondActivity.this);
             }
         });
     }

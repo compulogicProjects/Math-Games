@@ -15,4 +15,19 @@
     <string name="admod_appID" translatable="false">ca-app-pub-3103905625798676~4178269847</string>
 
 
+    <string name="facebook_app_id">389300599309323</string>
+      //... test id
+      <string name="fb_banner_id">IMG_16_9_APP_INSTALL#178236707554390_178236810887713</string> test id
+      <string name="fb_interstitial_Id">IMG_16_9_APP_INSTALL#178236707554390_178237247554336</string> test id
+      <string name="fb_native_id">IMG_16_9_APP_INSTALL#178236707554390_178237504220977</string>--> test id
+<!--
+
+      //... orignal id
+    <string name="fb_banner_id">389300599309323_389301312642585</string> test id
+    <string name="fb_interstitial_Id">389300599309323_389301739309209</string> test id
+    <string name="fb_native_id">389300599309323_389302059309177</string>&ndash;&gt; test id
+
+-->
+
+
 </resources>

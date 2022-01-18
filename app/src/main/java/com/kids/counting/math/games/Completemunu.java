@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.kids.counting.math.games.ads.Ad_Helper;
+import com.kids.counting.math.games.ads.Facebook_AdHelper;
 
 
 public class Completemunu extends AppCompatActivity {
@@ -26,9 +26,11 @@ public class Completemunu extends AppCompatActivity {
         btndiv=findViewById(R.id.btndivide);
         backimage=findViewById(R.id.backimage);
 
-        relativeLayout=findViewById(R.id.mainLayout);
+        //relativeLayout=findViewById(R.id.mainLayout);
 
-        Ad_Helper.showNativeAd(this,relativeLayout);
+        //Ad_Helper.showNativeAd(this,relativeLayout);
+
+        Facebook_AdHelper.loadFacebookNativeAd(this);
 
         backimage.setOnClickListener(new View.OnClickListener() {
             @Override

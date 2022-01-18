@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.kids.counting.math.games.ads.Ad_Helper;
+import com.kids.counting.math.games.ads.Facebook_AdHelper;
 
 
 public class CountingActivity extends AppCompatActivity {
@@ -29,8 +29,9 @@ public class CountingActivity extends AppCompatActivity {
         myListAdapter=new MyListAdapter(listdata,this);
         recyclerView.setAdapter(myListAdapter);
 
-        LinearLayout linearLayout= findViewById(R.id.layad);
-        Ad_Helper.loadMediationBannerAd(this,linearLayout);
+     //   LinearLayout linearLayout= findViewById(R.id.layad);
+       // Ad_Helper.loadMediationBannerAd(this,linearLayout);
+        Facebook_AdHelper.loadFacebookBannerAd(this);
 
         backimage.setOnClickListener(new View.OnClickListener() {
             @Override

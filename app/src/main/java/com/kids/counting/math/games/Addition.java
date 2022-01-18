@@ -18,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 
-import com.kids.counting.math.games.ads.Ad_Helper;
+import com.kids.counting.math.games.ads.Facebook_AdHelper;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -64,8 +64,9 @@ public class Addition extends AppCompatActivity {
         getQuizQuestion(QuizModelArrayList);
         currentpos=random.nextInt(QuizModelArrayList.size());
         setDataToView(currentpos);
-        linearLayout=findViewById(R.id.layad);
-        Ad_Helper.loadMediationBannerAd(this,linearLayout);
+        //linearLayout=findViewById(R.id.layad);
+        Facebook_AdHelper.loadFacebookBannerAd(this);
+        //Ad_Helper.loadMediationBannerAd(this,linearLayout);
         sharedPreferences=getSharedPreferences("prefname",MODE_PRIVATE);
         sharedPreferences sp= new sharedPreferences();
          int name =  sp.getValue(this,"musc");

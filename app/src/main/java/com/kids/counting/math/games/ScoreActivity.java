@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.kids.counting.math.games.ads.Ad_Helper;
+import com.kids.counting.math.games.ads.Facebook_AdHelper;
 
 import java.util.ArrayList;
 
@@ -34,7 +34,8 @@ public class ScoreActivity extends AppCompatActivity {
 
         relativeLayout=findViewById(R.id.mainLayout);
 
-        Ad_Helper.showNativeAd(this,relativeLayout);
+        //Ad_Helper.showNativeAd(this,relativeLayout);
+        Facebook_AdHelper.loadFacebookNativeAd(this);
 
 
             Intent intent= getIntent();
@@ -76,7 +77,8 @@ public class ScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Constant.intentconstant=4;
-                Ad_Helper.showIntersitial(ScoreActivity.this);
+                //Ad_Helper.showIntersitial(ScoreActivity.this);
+                Facebook_AdHelper.loadFacebookInterstitialAd(ScoreActivity.this);
                 finish();
             }
         });

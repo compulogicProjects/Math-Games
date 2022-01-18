@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.kids.counting.math.games.ads.Ad_Helper;
+import com.kids.counting.math.games.ads.Facebook_AdHelper;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -31,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
             img = findViewById(R.id.imglogo);
             title = findViewById(R.id.title);
 
-            Ad_Helper.loadIntersitialAd(this);
-            Ad_Helper.loadNativeAd(this);
+            Facebook_AdHelper.iniSDK(MainActivity.this);
+
+           /* Ad_Helper.loadIntersitialAd(this);
+            Ad_Helper.loadNativeAd(this);*/
 
 
             animTop = AnimationUtils.loadAnimation(this, R.anim.top_animation);
